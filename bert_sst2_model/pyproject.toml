@@ -1,0 +1,101 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airedteaming-framework"
+version = "0.1.190"
+description = "AI RedTeaming Application"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Protectt.ai" }]
+license = { text = "Protectt.ai" }
+
+dependencies = [
+    "streamlit",
+    "pandas",
+    "python-dotenv",
+    "colorama",
+    "openpyxl",
+    "docx",
+    "tqdm",
+    "langchain",
+    "langchain_openai",
+    "langchain_mistralai",
+    "langchain_core",
+    "langgraph",
+    "prettytable",
+    "pymupdf",
+    "python-docx",
+    "langchain-openai",
+    "langchain-anthropic",
+    "langchain-google-genai",
+    "langchain-cohere",
+    "langchain-huggingface",
+    "langchain-ollama",
+    "langchain-ai21",
+    "openai",
+    "anthropic",
+    "google-cloud-aiplatform",
+    "cohere",
+    "huggingface_hub",
+    "ollama",
+    "ai21",
+    "twine",
+    "pydantic",
+    "tabulate",
+    "datasets",
+    "sentence-transformers",
+    "transformers",
+    "rouge-score",
+    "nltk",
+    "textstat",
+    "language-tool-python",
+    "pandas",
+    "matplotlib",
+    "plotly>=5.18.0",
+    "kaleido>=0.2.1",
+    "seaborn",
+    "reportlab",
+    "selenium==4.15.2",
+    "webdriver-manager==4.0.1",
+    "crypto",
+    "pycryptodome",
+    "requests",
+    "cvss>=3.0",
+    "pandas",
+    "ollama",
+    "jsonschema",
+    "jinja2",
+    "selenium",
+    "openai",
+    "transformers",
+    "language-tool-python",
+    "textstat",
+    "sentence-transformers",
+    "rouge-score",
+    "nltk",
+    "pyyaml",
+    "langdetect",
+    "python-dotenv",
+    "openpyxl",
+    "onnx",
+    "azure-ai-ml>=1.0.0",
+    "azure-identity>=1.12.0",
+    "azure-core>=1.24.0",
+    "azure-storage-blob>=12.0.0",
+    "py7zr",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src", "."]
+include = ["framework*", "webdriver_client*", "evaluation_module*"]
+
+[tool.setuptools.package-data]
+attack_data = ["**./*.parquet", "*.csv", "*.parquet", "*.orc", "*.avro"]
+resources = ["*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg", "*.env", ".env"]
+framework = ["attack_data/**/*", "resources/*", "resources/.env", "resources/*.env", "./.env", ".env", "evaluation_module/data/*.yaml", "evaluation_module/data/*.yml", "evaluation_module/data/*.json", "report_engine/model_scan_report_engine/resources_model_scan/*.yaml", "report_engine/model_scan_report_engine/resources_model_scan/*.yml", "report_engine/model_scan_report_engine/resources_model_scan/*.json", "model_scanner/core/aibom/*.yaml", "model_scanner/core/aibom/*.yml", "model_scanner/model_scanner_resources/*.yaml", "model_scanner/model_scanner_resources/*.yml"]
+
